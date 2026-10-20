@@ -1,0 +1,455 @@
+﻿
+
+
+
+@page
+@model IndexModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Nidhi Yadav | Python Developer";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080b16" />
+    <meta name="description"
+          content="Nidhi Yadav's developer portfolio. Python, Django, MySQL and web development." />
+
+    <title>Nidhi Yadav | Python Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="brand" href="#home">Nidhi Yadav<span>.</span></a>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#journey">Journey</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <a class="nav-cta" href="#contact">Let's Talk <span>↗</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container" id="home">
+            <div class="hero-content">
+                <div class="availability">
+                    <span class="status-dot"></span>
+                    OPEN TO OPPORTUNITIES
+                </div>
+
+                <p class="eyebrow">HELLO, I'M</p>
+
+                <h1>
+                    Nidhi<br />
+                    <span class="gradient-text">Yadav.</span>
+                </h1>
+
+                <h2 class="role-line">
+                    I'm a <span id="typedRole">Python Developer</span><span class="cursor">|</span>
+                </h2>
+
+                <p class="hero-description">
+                    I build database-driven web applications with Python and Django.
+                    I enjoy turning ideas into clean, useful and responsive digital
+                    experiences while learning something new with every project.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">
+                        Explore My Work <span>↗</span>
+                    </a>
+                    @* <a class="button button-secondary" href="#contact">
+                        Get In Touch
+                    </a> *@
+                    <a class="button button-secondary"
+                       href="/images/files/Nidhi_Yadav_Resume (1).pdf"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View Resume ↗
+                    </a>
+                    <a class="button button-secondary"
+                       href="/files/Nidhi-Yadav-Resume.pdf"
+                       download>
+                        Download Resume ↓
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/ny8441382-sys"
+                       target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                    <span class="social-divider">/</span>
+                    <a href="https://www.linkedin.com/in/nidhi-yadav-bba5133ab/"
+                       target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <div class="window-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="file-label">developer.py</span>
+                        <span class="live-label">● LIVE</span>
+                    </div>
+
+                    <div class="code-content">
+                        <p>
+                            <span class="line-number">01</span>
+                            <span class="code-purple">class</span>
+                            <span class="code-yellow">Developer</span>:
+                        </p>
+                        <p>
+                            <span class="line-number">02</span>
+                            &nbsp;&nbsp;<span class="code-purple">def</span>
+                            <span class="code-blue">__init__</span>(self):
+                        </p>
+                        <p>
+                            <span class="line-number">03</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;self.name =
+                            <span class="code-green">"Nidhi Yadav"</span>
+                        </p>
+                        <p>
+                            <span class="line-number">04</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;self.role =
+                            <span class="code-green">"Python Developer"</span>
+                        </p>
+                        <p>
+                            <span class="line-number">05</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;self.skills = [
+                        </p>
+                        <p>
+                            <span class="line-number">06</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="code-green">"Python"</span>,
+                        </p>
+                        <p>
+                            <span class="line-number">07</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="code-green">"Django"</span>,
+                        </p>
+                        <p>
+                            <span class="line-number">08</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="code-green">"MySQL"</span>
+                        </p>
+                        <p>
+                            <span class="line-number">09</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;]
+                        </p>
+                        <p>
+                            <span class="line-number">10</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;self.status =
+                            <span class="code-green">"Always learning"</span>
+                        </p>
+                    </div>
+
+                    <div class="code-card-footer">
+                        <span><span class="status-dot"></span> Building something meaningful</span>
+                        <span>UTF-8</span>
+                    </div>
+                </div>
+
+                <div class="floating-badge badge-python">
+                    <span class="badge-symbol">Py</span>
+                    <span><strong>Python</strong><small>Backend</small></span>
+                </div>
+
+                <div class="floating-badge badge-django">
+                    <span class="badge-symbol django-symbol">Dj</span>
+                    <span><strong>Django</strong><small>Web framework</small></span>
+                </div>
+
+                <div class="hero-caption">
+                    <span class="caption-line"></span>
+                    <span>Curiosity into code.</span>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-indicator">
+                <span class="scroll-icon">↓</span> SCROLL TO EXPLORE
+            </a>
+        </section>
+
+        <section class="intro-strip container" id="about">
+            <div>
+                <span class="section-kicker">01 / ABOUT ME</span>
+                <h2>
+                    Building with purpose.<br />
+                    <span class="gradient-text">Learning every day.</span>
+                </h2>
+            </div>
+            <div class="intro-copy">
+                <p>
+                    I'm a computer science graduate with an interest in backend
+                    development and database-driven applications. Through my
+                    projects and internship, I've explored application logic,
+                    database connectivity and responsive user interfaces.
+                </p>
+                <p>
+                    My goal is to keep improving my development skills and contribute
+                    to practical software projects with a collaborative team.
+                </p>
+            </div>
+        </section>
+
+        <section class="profile-section container" id="profile">
+            <div class="profile-photo-wrap">
+                <div class="profile-photo-frame">
+                    <img src="/images/profile/Ashu.jpeg44r"
+                         alt="Nidhi Yadav"
+                         class="profile-photo"
+                         onerror="this.hidden=true; this.nextElementSibling.hidden=false;" />
+                    <div class="profile-photo-fallback" hidden>NY</div>
+                </div>
+                <span class="profile-photo-caption">Python Developer · Lifelong Learner</span>
+            </div>
+            <div class="profile-info">
+                <span class="section-kicker">A LITTLE MORE ABOUT ME</span>
+                <h2>Curious mind. <span class="gradient-text">Practical builder.</span></h2>
+                <p>
+                    I enjoy learning how applications work behind the scenes—from Python
+                    and Django logic to database design and user-friendly web pages.
+                </p>
+                <p>
+                    I am looking for opportunities to keep learning, contribute to a team
+                    and build useful software.
+                </p>
+                <a class="button button-primary" href="#projects">Explore My Projects <span>↗</span></a>
+            </div>
+        </section>
+
+        <section class="skills-section container" id="skills">
+            <span class="section-kicker">02 / MY TOOLKIT</span>
+            <h2 class="section-heading">Technologies I <span class="gradient-text">work with.</span></h2>
+            <p class="section-subtitle">The tools I've used in my learning and projects.</p>
+
+            <div class="skills-grid">
+                <div class="skill-card"><span class="skill-icon python-icon">Py</span><strong>Python</strong><small>Programming</small></div>
+                <div class="skill-card"><span class="skill-icon django-icon">Dj</span><strong>Django</strong><small>Web framework</small></div>
+                <div class="skill-card"><span class="skill-icon sql-icon">DB</span><strong>MySQL</strong><small>Database</small></div>
+                <div class="skill-card"><span class="skill-icon html-icon">5</span><strong>HTML & CSS</strong><small>Web design</small></div>
+                <div class="skill-card"><span class="skill-icon js-icon">JS</span><strong>JavaScript</strong><small>Interactivity</small></div>
+                <div class="skill-card"><span class="skill-icon git-icon">Git</span><strong>Git & GitHub</strong><small>Version control</small></div>
+            </div>
+        </section>
+
+        <section class="projects-section container" id="projects">
+            <span class="section-kicker">03 / SELECTED WORK</span>
+            <h2 class="section-heading">Projects that bring ideas <span class="gradient-text">to life.</span></h2>
+            <p class="section-subtitle">A look at applications I've worked on.</p>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-art tailor-art">
+                        <span class="project-number">PROJECT / 01</span>
+                        <div class="project-art-icon">✂</div>
+                        <span class="art-label">TAILOR MANAGEMENT</span>
+                        <div class="art-window">
+                            <span></span><span></span><span></span>
+                            <div class="art-line"></div>
+                            <div class="art-line short"></div>
+                            <div class="art-pill">Order tracking</div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-tags"><span>Python</span><span>Django</span><span>MySQL</span></div>
+                        <h3>TailorTrack</h3>
+                        <p>A tailoring management application for managing customer records, tracking orders and following order progress from placement to delivery.</p>
+                        <div class="project-bottom">
+                            <span>Web Application</span>
+                            <span class="project-arrow">↗</span>
+                            <div class="project-links">
+                                <a href="https://github.com/ny8441382-sys"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="btn-primary">
+                                    View on GitHub ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-art education-art">
+                        <span class="project-number">PROJECT / 02</span>
+                        <div class="education-orb">N<span>G</span></div>
+                        <span class="art-label">LEARN. GROW. DISCOVER.</span>
+                        <div class="education-lines"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-tags"><span>Python</span><span>Django</span><span>SQL</span></div>
+                        <h3>NouE-Gyan Portal</h3>
+                        <p>An educational web portal featuring user authentication, relational database connectivity, data validation and responsive web pages.</p>
+                        <div class="project-bottom">
+                            <span>Educational Platform</span>
+                            <span class="project-arrow">↗</span>
+                            <div class="project-links">
+                                <a href="https://github.com/ny8441382-sys"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="btn-primary">
+                                    View on GitHub ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <p class="project-note">Project descriptions are based on my development work. Source code and live demos can be linked here when available.</p>
+        </section>
+
+        <section class="journey-section container" id="journey">
+            <span class="section-kicker">04 / MY JOURNEY</span>
+            <h2 class="section-heading">Every step is <span class="gradient-text">progress.</span></h2>
+
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 – 2027</span>
+                        <h3>B.Tech — Computer Science Engineering</h3>
+                        <p>Maharishi University of Information Technology, Lucknow</p>
+                        <span class="timeline-type">Education</span>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 – 2024</span>
+                        <h3>Diploma — Computer Science Engineering</h3>
+                        <p>Board of Technical Education, Uttar Pradesh</p>
+                        <span class="timeline-type">Education</span>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026</span>
+                        <h3>Technical Domain Internship</h3>
+                        <p>Talking Crooks IT Pvt. Ltd. — UI concept design, documentation and gap analysis.</p>
+                        <span class="timeline-type">Internship</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="certificates-section container" id="certificates">
+            <span class="section-kicker">05 / LEARNING & CERTIFICATES</span>
+            <h2 class="section-heading">Learning that <span class="gradient-text">keeps me moving.</span></h2>
+            <p class="section-subtitle">
+                Select a certificate card to view the original certificate. Add the image files
+                to the certificates folder as explained in the setup notes.
+            </p>
+
+            <div class="certificate-grid">
+                <button type="button"
+                        class="certificate-card"
+                        data-certificate-src="/images/certificates/Alok (2).jpeg"
+                        data-certificate-title="Computer Technology — Softpro India">
+                    <div class="certificate-preview">
+                        <img src="/images/certificates/Alok (2).jpeg"
+                             alt="Softpro India certificate preview"
+                             onerror="this.hidden=true; this.nextElementSibling.hidden=false;" />
+                        <div class="certificate-placeholder" hidden>
+                            <span class="certificate-placeholder-icon">✦</span>
+                            <strong>Certificate image needed</strong>
+                            <small>Add softpro-certificate.jpg</small>
+                        </div>
+                    </div>
+                    <span class="certificate-provider">SOFTPRO INDIA · 2022</span>
+                    <strong class="certificate-title">Computer Technology</strong>
+                    <span class="certificate-action">Click to view certificate ↗</span>
+                </button>
+
+                <button type="button"
+                        class="certificate-card"
+                        data-certificate-src="/images/certificates/Ak.jpeg"
+                        data-certificate-title="Technical Internship — Talking Crooks IT">
+                    <div class="certificate-preview">
+                        <img src="/images/certificates/Ak.jpeg"
+                             alt="Talking Crooks IT certificate preview"
+                             onerror="this.hidden=true; this.nextElementSibling.hidden=false;" />
+                        <div class="certificate-placeholder" hidden>
+                            <span class="certificate-placeholder-icon">✦</span>
+                            <strong>Certificate image needed</strong>
+                            <small>Add talking-crooks-certificate.jpg</small>
+                        </div>
+                    </div>
+                    <span class="certificate-provider">TALKING CROOKS IT · 2026</span>
+                    <strong class="certificate-title">Technical Internship</strong>
+                    <span class="certificate-action">Click to view certificate ↗</span>
+                </button>
+            </div>
+        </section>
+
+        <div class="certificate-modal" id="certificateModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="certificateModalTitle">
+            <div class="certificate-modal-backdrop" data-close-certificate></div>
+            <div class="certificate-modal-panel">
+                <button type="button" class="certificate-modal-close" aria-label="Close certificate viewer" data-close-certificate>×</button>
+                <h2 id="certificateModalTitle">Certificate</h2>
+                <img id="certificateModalImage" alt="Full certificate" />
+                <p id="certificateModalMessage" hidden></p>
+                <a id="certificateOpenOriginal" href="#" target="_blank" rel="noopener noreferrer" hidden>Open original file ↗</a>
+            </div>
+        </div>
+
+        <section class="contact-section container" id="contact">
+            <div class="contact-panel">
+                <span class="section-kicker">05 / LET'S CONNECT</span>
+                <h2>Have an opportunity?<br /><span class="gradient-text">Let's build something.</span></h2>
+                <p>I'm interested in entry-level Python development opportunities and learning from real-world projects.</p>
+                <a href="mailto:ny8441382@gmail.com">
+                    Email Me
+                </a>
+                <div class="contact-links">
+                    <a href="https://github.com/ny8441382-sys" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                    <a href="https://www.linkedin.com/in/nidhi-yadav-bba5133ab/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer container">
+        <a class="brand" href="#home">Nidhi Yadav<span>.</span></a>
+        <p>Designed with curiosity. Built with code.</p>
+        <p>© <span id="currentYear">2026</span> Nidhi Yadav</p>
+    </footer>
+
+    <script src="/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
