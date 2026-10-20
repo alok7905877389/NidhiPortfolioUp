@@ -1694,72 +1694,76 @@ a:focus-visible, button:focus-visible {
 
 /* Final mobile and tablet layout fixes */
 
-html,
+
+/* Responsive layout fixes */
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
 body {
     width: 100%;
     max-width: 100%;
     overflow-x: clip;
 }
 
-img {
+img,
+video,
+iframe {
     max-width: 100%;
 }
 
-@media (max-width: 768px) {
+.container {
+    width: min(1120px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.hero > *,
+.profile-section > *,
+.intro-strip > *,
+.skills-grid > *,
+.projects-grid > *,
+.certificate-grid > * {
+    min-width: 0;
+}
+
+.hero h1,
+.profile-info h2,
+.section-heading,
+.intro-strip h2,
+.contact-panel h2 {
+    overflow-wrap: anywhere;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
     .container {
-        width: calc(100% - 32px);
-        max-width: 100%;
-    }
-
-    .navbar {
-        gap: 10px;
-    }
-
-    .brand {
-        font-size: clamp(21px, 5vw, 27px);
-        letter-spacing: -1px;
+        width: calc(100% - 36px);
     }
 
     .hero {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 35px;
-        padding: 55px 0 75px;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+        gap: 22px;
     }
 
     .hero h1 {
-        font-size: clamp(52px, 13vw, 76px);
-        line-height: 1;
-        letter-spacing: -3px;
+        font-size: clamp(42px, 7vw, 66px);
+        letter-spacing: -2px;
+        overflow-wrap: anywhere;
     }
 
-    .hero-description {
-        max-width: 100%;
-        font-size: 14px;
+    .orbit-one {
+        width: min(350px, 100%);
+        height: auto;
+        aspect-ratio: 1;
     }
 
-    .hero-actions {
-        gap: 10px;
-    }
-
-    .hero-actions .button {
-        min-height: 44px;
-        padding: 0 13px;
-        font-size: 12px;
-    }
-
-    .hero-visual {
-        width: 100%;
-        min-width: 0;
-        margin: 0 auto;
-        padding: 30px 8px;
-    }
-
-    .code-card {
-        transform: none;
-    }
-
-    .code-card:hover {
-        transform: none;
+    .orbit-two {
+        width: min(290px, 82%);
+        height: auto;
+        aspect-ratio: 1;
     }
 
     .badge-python {
@@ -1770,31 +1774,187 @@ img {
         left: 0;
     }
 
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a,
+    .nav-cta {
+        font-size: 12px;
+    }
+
+    .profile-section {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        gap: 25px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .navbar {
+        min-height: 68px;
+        gap: 10px;
+    }
+
+    .brand {
+        font-size: clamp(19px, 5vw, 25px);
+        letter-spacing: -1px;
+        overflow-wrap: anywhere;
+    }
+
+    .menu-toggle {
+        flex: 0 0 42px;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        padding: 10px 16px 16px;
+        background: #0c1020;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .hero {
+        grid-template-columns: minmax(0, 1fr);
+        min-height: auto;
+        gap: 28px;
+        padding: 48px 0 75px;
+    }
+
+    .hero-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 12vw, 68px);
+        line-height: 1.08;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero-actions .button {
+        max-width: 100%;
+        min-width: 0;
+        padding-inline: 12px;
+        font-size: 12px;
+    }
+
+    .social-links,
+    .contact-links {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero-visual {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 35px 5px;
+    }
+
+    .code-card {
+        width: 100%;
+        max-width: 100%;
+        transform: none;
+    }
+
+    .code-content {
+        max-width: 100%;
+        overflow-x: auto;
+        font-size: 10px;
+    }
+
+    .floating-badge {
+        max-width: 48%;
+        gap: 6px;
+        padding: 8px;
+    }
+
+    .floating-badge strong {
+        font-size: 10px;
+    }
+
+    .floating-badge small {
+        font-size: 8px;
+    }
+
+    .badge-python {
+        top: 0;
+        right: 0;
+    }
+
+    .badge-django {
+        bottom: 5px;
+        left: 0;
+    }
+
     .intro-strip {
         grid-template-columns: minmax(0, 1fr);
-        gap: 20px;
+        gap: 16px;
+        padding-block: 50px;
     }
 
     .skills-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .skill-card {
+        grid-template-columns: 32px minmax(0, 1fr);
+        gap: 8px;
+        padding: 12px 8px;
+    }
+
+    .skill-icon {
+        width: 32px;
+        height: 32px;
     }
 
     .projects-grid,
     .certificate-grid {
         grid-template-columns: minmax(0, 1fr);
-    }
-
-    .profile-section {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .profile-photo-frame {
-        width: min(240px, 75vw);
+        gap: 18px;
     }
 
     .project-card,
-    .skill-card,
     .certificate-card {
+        width: 100%;
         min-width: 0;
     }
 
@@ -1802,25 +1962,73 @@ img {
         padding: 18px;
     }
 
+    .project-details h3,
+    .project-details p {
+        overflow-wrap: anywhere;
+    }
+
+    .project-bottom {
+        flex-wrap: wrap;
+    }
+
+    .project-links {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .profile-section {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        padding-block: 50px;
+    }
+
+    .profile-photo-frame {
+        width: min(220px, 75vw);
+    }
+
+    .profile-info {
+        min-width: 0;
+        text-align: center;
+    }
+
+    .profile-info p {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .certificate-preview,
+    .certificate-preview img {
+        max-width: 100%;
+    }
+
     .contact-panel {
-        padding: 26px 20px;
+        padding: 24px 18px;
     }
 
     .site-footer {
         flex-wrap: wrap;
         gap: 12px;
     }
+
+    .scroll-indicator {
+        max-width: 100%;
+        font-size: 8px;
+    }
 }
 
-@media (max-width: 480px) {
-    .nav-links {
-        left: 0;
-        right: 0;
-        width: 100%;
+/* Small phones */
+@media (max-width: 380px) {
+    .container {
+        width: calc(100% - 24px);
     }
 
     .hero h1 {
-        font-size: clamp(48px, 14vw, 64px);
+        font-size: clamp(36px, 11vw, 44px);
+        letter-spacing: -1.5px;
+    }
+
+    .skills-grid {
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .hero-actions {
@@ -1832,21 +2040,14 @@ img {
         width: 100%;
     }
 
-    .skills-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
     .floating-badge {
-        padding: 8px 10px;
+        max-width: 46%;
+        padding: 6px;
     }
 
-    .scroll-indicator {
-        font-size: 8px;
-        letter-spacing: 1px;
-    }
-
-    .section-heading,
-    .intro-strip h2 {
-        font-size: clamp(27px, 8vw, 34px);
+    .code-card-header,
+    .code-card-footer {
+        padding: 12px 8px;
+        font-size: 9px;
     }
 }
